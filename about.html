@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Dropdown</title>
+</head>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: #36a8f4;
+    padding: 10px;
+}
+
+.menu-item {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-item button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.menu-item button:hover {
+    background-color: #d32f2f;
+}
+
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+    animation: fadeIn 0.3s ease-in-out; /* Smooth fade effect */
+}
+
+.dropdown-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu a:hover {
+    background-color: #d32f2f;
+}
+
+/* Show the dropdown menu when hovering on the button or menu */
+.menu-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
+
+<body>
+    <nav class="menu">
+        <div class="menu-item">
+            <button id="about-btn">About</button>
+            <div class="dropdown-menu">
+                <a href="#who-we-are">Who we are?</a>
+                <a href="#our-founder">Our Founder</a>
+                <a href="#board-of-directors">Board of Directors</a>
+                <a href="#senior-management">Senior Management</a>
+                <a href="#corporate-info">Corporate Information</a>
+                <a href="#awards-recognition">Awards & Recognition</a>
+                <a href="#group-milestones">Group Milestones</a>
+                <a href="#resource-centre">Resource Centre</a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
